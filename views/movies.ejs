@@ -1,0 +1,15 @@
+<% include ./includes/header.ejs %>
+
+<div class="movie_container">
+    <div class="container">
+        <div class="row">
+            <% for(var i=0; i < list_movies.length; i++) { %>
+                <div class="col image_wrap s3">
+                    <img src="<%= poster_path %><%= list_movies[i].poster_path %>" class="img-responsive" alt="<%= list_movies[i].title %>" />
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<% include ./includes/footer.ejs %>

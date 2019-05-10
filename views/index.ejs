@@ -1,0 +1,24 @@
+<% include ./includes/header.ejs %>
+
+<div class="movie_container">
+    <div class="container">
+        <div class="row">
+            <h4>Get Popular Movies</h4>
+            <% for(var i=0; i < 4; i++) { %>
+                <div class="col image_wrap s3">
+                    <img src="<%= poster_path %><%= list_movies[i].poster_path %>" class="img-responsive" alt="<%= list_movies[i].title %>" />
+                </div>
+            <% } %>
+        </div>
+        <div class="row">
+            <h4>Get Popular Tv</h4>
+            <% for(var i=0; i < 4; i++) { %>
+                <div class="col image_wrap s3">
+                    <img src="<%= poster_path %><%= list_tv_shows[i].poster_path %>" class="img-responsive" alt="<%= list_tv_shows[i].title %>" />
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<% include ./includes/footer.ejs %>
